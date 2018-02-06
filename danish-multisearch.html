@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body style="background-color:grey">
+
+<p>What Danish word would you like to multisearch? Type below, then press enter please.</p>
+<input type="text" id="boxu" autofocus>
+
+		<script>
+document.getElementById("boxu").onkeydown = function(e) {searchy(e)};
+function searchy(e) 
+{
+	if (e.which == 13)
+	{
+  	 var q = document.getElementById("boxu").value;
+	 window.open("https://www.ordbogen.com/opslag.php?word=" + q +"&dict=auto");
+	 window.open("https://translate.google.dk/#da/en/" + q);
+	 window.open("http://www.forvo.com/word/" + q + "/#da");
+	 window.open("https://daen.dict.cc/?s=" + q);
+	 window.open("https://www.google.com/search?tbm=isch&as_q=" + q + "&tbs=isz:lt,islt:4mp,sur:fmc");
+	 document.getElementById("boxu").value = "";		
+	}
+}
+		</script>
+	</body>
+</html>
+
